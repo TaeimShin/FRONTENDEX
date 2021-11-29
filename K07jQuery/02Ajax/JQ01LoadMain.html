@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../common/jquery/jquery-3.6.0.js"></script> 
+    
+    <script> 
+    var loadCode = function(){ 
+        $('#loadView').load('./common/01LoadSub.html'); 
+        alert('load됨'); 
+    } 
+    $(function(){ 
+        $('#loadTxtBtn').click(function(){ 
+            $('#loadTxt').load('./common/01LoadTxt.txt'); 
+            alert('txt - load됨'); 
+        }); 
+     }); 
+     </script> 
+</head>
+<body>
+     
+    <div> 
+    <h2>$.load() 메소드사용하기</h2> 
+    <h3>html파일 로드하기</h3> 
+    <div id="loadView"> 여긴 로드뷰 </div> 
+    <button onclick="loadCode();">버튼1</button> 
+    
+    <h3>txt파일로드</h3> 
+    <div id="loadTxt" > 텍스트파일의 내용을 비동기 방식으로 로드 </div> 
+    <button id="loadTxtBtn">버튼2</button> 
+</div> 
+</body>
+</html>
